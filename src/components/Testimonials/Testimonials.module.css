@@ -1,0 +1,116 @@
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sectionDivider {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.testi {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sectionSubtitle {
+    font-size: 1rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.span {
+    color: #e91e63;
+}
+
+.sectionText {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.testiList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.hasScrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #e91e63 transparent;
+}
+
+.testiItem {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.testiCard {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profileWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.testiName {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.testiTitle {
+    font-size: 1rem;
+    color: #888;
+}
+
+.testiText {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.ratingWrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ratingWrapper ion-icon {
+    color: #f8b400;
+    margin-right: 5px;
+}

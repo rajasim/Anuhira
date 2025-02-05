@@ -1,0 +1,96 @@
+.section {
+    padding: 60px 0;
+}
+
+.sectionDivider {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.gray {
+    background-color: #f5f5f5;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bannerList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.bannerItem {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.bannerLg {
+    flex: 1 1 calc(100% - 20px);
+}
+
+.bannerMd {
+    flex: 1 1 calc(50% - 20px);
+}
+
+.bannerSm {
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+.bannerCard {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.bannerItemContent {
+    padding: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.bannerSubtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bannerTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.bannerText {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d81b60;
+}

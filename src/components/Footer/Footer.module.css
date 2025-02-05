@@ -1,0 +1,113 @@
+.footer {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.footerTop {
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footerBrand {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.span {
+    color: #ff5733;
+}
+
+.footerText {
+    font-size: 18px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.socialList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.socialLink {
+    font-size: 24px;
+    color: #333;
+    margin: 0 10px;
+}
+
+.footerList {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.footerListTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footerListItem {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.footerForm {
+    margin-top: 40px;
+}
+
+.inputWrapper {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.inputField {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footerBottom {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.copyrightText {
+    margin: 0;
+    font-size: 16px;
+}
+
+.copyrightLink {
+    color: #ff5733;
+    text-decoration: none;
+}

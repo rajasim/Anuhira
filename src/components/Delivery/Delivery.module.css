@@ -1,0 +1,91 @@
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sectionDivider {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.gray {
+    background-color: #f7f7f7;
+}
+
+.delivery {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.deliveryContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.span {
+    color: #e91e63;
+}
+
+.sectionText {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 15px 40px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btnHover:hover {
+    background-color: #d81b60;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.deliveryBanner {
+    position: relative;
+}
+
+.deliveryImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translate(-50%, -60%) scale(0.8);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

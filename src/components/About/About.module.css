@@ -1,0 +1,84 @@
+/* Section & Container */
+.section {
+    padding: 60px 0;
+    position: relative;
+}
+
+.sectionDivider {
+    border-top: 1px solid #ddd;
+}
+
+.gray {
+    background-color: #f7f7f7;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+/* Content Styles */
+.aboutContent {
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.span {
+    display: block;
+    color: #ff6347;
+    font-weight: normal;
+}
+
+.sectionText {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* List Styles */
+.aboutList {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.aboutItem {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutItem ion-icon {
+    font-size: 1.2em;
+    color: #ff6347;
+    margin-right: 10px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btnHover:hover {
+    background-color: #e5533e;
+}

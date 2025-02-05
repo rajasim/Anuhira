@@ -1,0 +1,138 @@
+.section {
+    padding: 60px 0;
+}
+
+.sectionDivider {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.blog {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sectionSubtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.span {
+    color: #e91e63;
+}
+
+.sectionText {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.blogList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blogCard {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cardBanner {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.badge {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e91e63;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.cardContent {
+    padding: 20px;
+}
+
+.cardMetaWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cardMetaLink {
+    color: #888;
+    text-decoration: none;
+}
+
+.metaInfo {
+    font-size: 1rem;
+    color: #666;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cardText {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btnLink {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #e91e63;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.btnLink span {
+    margin-right: 10px;
+}
+
+.cardTitleLink {
+    text-decoration: none;
+    color: #333;
+}
+
+.cardTitleLink:hover {
+    color: #e91e63;
+}
+
+ion-icon {
+    font-size: 1.5rem;
+    color: #e91e63;
+}
