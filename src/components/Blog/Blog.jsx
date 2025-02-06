@@ -7,11 +7,11 @@ const Blog = () => {
                 <p className={styles.sectionSubtitle}>Latest Blog Posts</p>
 
                 <h2 className={styles.sectionTitle}>
-                    This Is All About <span className={styles.span}>Indian Farali Foods</span>
+                    Explore <span className={styles.highlight}>Indian Farali Foods</span>
                 </h2>
 
                 <p className={styles.sectionText}>
-                    Farali food is specially prepared for fasting days, using ingredients that are allowed during fasting. It's tasty, nutritious, and perfect for detoxing.
+                    Discover the authentic recipes and vibrant flavors of traditional Indian fasting cuisine—crafted with care for your detox and nourishment.
                 </p>
 
                 <ul className={styles.blogList}>
@@ -24,27 +24,29 @@ const Blog = () => {
                             <div className={styles.cardContent}>
                                 <div className={styles.cardMetaWrapper}>
                                     <a href="#" className={styles.cardMetaLink}>
-                                        <ion-icon name="calendar-outline"></ion-icon>
-                                        <time className={styles.metaInfo} datetime="2022-01-01">Jan 01 2022</time>
+                                        <span className={styles.icon}>📅</span>
+                                        <time className={styles.metaInfo} dateTime="2022-01-01">Jan 01 2022</time>
                                     </a>
 
                                     <a href="#" className={styles.cardMetaLink}>
-                                        <ion-icon name="person-outline"></ion-icon>
+                                        <span className={styles.icon}>👤</span>
                                         <p className={styles.metaInfo}>Ravi Kumar</p>
                                     </a>
                                 </div>
 
                                 <h3 className={styles.cardTitle}>
-                                    <a href="#" className={styles.cardTitleLink}>Delicious Farali Sabudana Khichdi Recipe</a>
+                                    <a href="#" className={styles.cardTitleLink}>
+                                        Traditional Sabudana Khichdi for Fasting
+                                    </a>
                                 </h3>
 
                                 <p className={styles.cardText}>
-                                    Discover the rich and tasty recipe of Sabudana Khichdi, a popular dish made during fasting days, using sago, potatoes, and spices.
+                                    Embrace the simplicity and flavor of Sabudana Khichdi—a nutritious dish perfect for fasting days, combining sago, potatoes, and a hint of spice.
                                 </p>
 
                                 <a href="#" className={styles.btnLink}>
                                     <span>Read More</span>
-                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                    <span className={styles.arrowIcon}>→</span>
                                 </a>
                             </div>
                         </div>
@@ -59,27 +61,29 @@ const Blog = () => {
                             <div className={styles.cardContent}>
                                 <div className={styles.cardMetaWrapper}>
                                     <a href="#" className={styles.cardMetaLink}>
-                                        <ion-icon name="calendar-outline"></ion-icon>
-                                        <time className={styles.metaInfo} datetime="2022-01-01">Jan 01 2022</time>
+                                        <span className={styles.icon}>📅</span>
+                                        <time className={styles.metaInfo} dateTime="2022-02-15">Feb 15 2022</time>
                                     </a>
 
                                     <a href="#" className={styles.cardMetaLink}>
-                                        <ion-icon name="person-outline"></ion-icon>
+                                        <span className={styles.icon}>👤</span>
                                         <p className={styles.metaInfo}>Priya Mehta</p>
                                     </a>
                                 </div>
 
                                 <h3 className={styles.cardTitle}>
-                                    <a href="#" className={styles.cardTitleLink}>Farali Dosa Recipe for Fasting Days</a>
+                                    <a href="#" className={styles.cardTitleLink}>
+                                        Gluten-Free Farali Dosa Recipe
+                                    </a>
                                 </h3>
 
                                 <p className={styles.cardText}>
-                                    Learn how to make crispy and healthy Farali Dosa using gluten-free ingredients, perfect for your fasting routine.
+                                    Learn the art of crafting crispy, gluten-free dosas using alternative flours and wholesome ingredients—perfect for your fasting routine.
                                 </p>
 
                                 <a href="#" className={styles.btnLink}>
                                     <span>Read More</span>
-                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                    <span className={styles.arrowIcon}>→</span>
                                 </a>
                             </div>
                         </div>
@@ -94,32 +98,33 @@ const Blog = () => {
                             <div className={styles.cardContent}>
                                 <div className={styles.cardMetaWrapper}>
                                     <a href="#" className={styles.cardMetaLink}>
-                                        <ion-icon name="calendar-outline"></ion-icon>
-                                        <time className={styles.metaInfo} datetime="2022-01-01">Jan 01 2022</time>
+                                        <span className={styles.icon}>📅</span>
+                                        <time className={styles.metaInfo} dateTime="2022-03-10">Mar 10 2022</time>
                                     </a>
 
                                     <a href="#" className={styles.cardMetaLink}>
-                                        <ion-icon name="person-outline"></ion-icon>
+                                        <span className={styles.icon}>👤</span>
                                         <p className={styles.metaInfo}>Ankit Sharma</p>
                                     </a>
                                 </div>
 
                                 <h3 className={styles.cardTitle}>
-                                    <a href="#" className={styles.cardTitleLink}>How to Make Farali Khandvi</a>
+                                    <a href="#" className={styles.cardTitleLink}>
+                                        Easy Farali Khandvi for Detox Days
+                                    </a>
                                 </h3>
 
                                 <p className={styles.cardText}>
-                                    Enjoy the traditional Gujarati Farali Khandvi made with gram flour, perfect for your fasting meals.
+                                    Master the delicate art of making soft and tangy Khandvi—a detoxifying Gujarati snack made with gram flour and tempered with spices.
                                 </p>
 
                                 <a href="#" className={styles.btnLink}>
                                     <span>Read More</span>
-                                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                                    <span className={styles.arrowIcon}>→</span>
                                 </a>
                             </div>
                         </div>
                     </li>
-
                 </ul>
             </div>
         </section>

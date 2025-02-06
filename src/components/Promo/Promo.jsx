@@ -82,19 +82,23 @@ const Promo = () => {
         <div className={styles.promoContainer}>
             {promoData.map((promo) => (
                 <div key={promo.id} className={styles.promoCard}>
-                    {promo.imageUrl ? (
-                        <img src={promo.imageUrl} alt={promo.title} className={styles.promoImage} />
-                    ) : (
-                        <div className={styles.loader}>Loading...</div>
-                    )}
-                    <h3>{promo.title}</h3>
-                    <p>{promo.description}</p>
-                    <ul>
-                        {promo.details.map((detail, index) => (
-                            <li key={index}>{detail}</li>
-                        ))}
-                    </ul>
-                    <button className={styles.btn}>Order Now</button>
+                    <div className={styles.imageWrapper}>
+                        {promo.imageUrl ? (
+                            <img src={promo.imageUrl} alt={promo.title} className={styles.promoImage} />
+                        ) : (
+                            <div className={styles.loader}>Loading...</div>
+                        )}
+                    </div>
+                    <div className={styles.cardContent}>
+                        <h3 className={styles.cardTitle}>{promo.title}</h3>
+                        <p className={styles.cardDescription}>{promo.description}</p>
+                        <ul className={styles.detailsList}>
+                            {promo.details.map((detail, index) => (
+                                <li key={index} className={styles.detailItem}>{detail}</li>
+                            ))}
+                        </ul>
+                        <button className={styles.btn}>Order Now</button>
+                    </div>
                 </div>
             ))}
         </div>

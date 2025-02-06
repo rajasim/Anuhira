@@ -4,13 +4,18 @@ import styles from './Footer.module.css';
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerTop} style={{ backgroundImage: 'url("./assets/images/footer-illustration.png")' }}>
+            <div
+                className={styles.footerTop}
+                style={{ backgroundImage: 'url("./assets/images/footer-dark-bg.png")' }}
+            >
                 <div className={styles.container}>
 
                     <div className={styles.footerBrand}>
-                        <a href="#" className={styles.logo}>Anuhira <span className={styles.span}>Faral</span></a>
+                        <a href="#" className={styles.logo}>
+                            Anuhira <span className={styles.span}>Faral</span>
+                        </a>
                         <p className={styles.footerText}>
-                            Bringing the authentic taste of Indian Faral to your doorstep.
+                            Delivering the true essence of Indian Faral with a modern twist.
                         </p>
 
                         <ul className={styles.socialList}>
@@ -48,7 +53,9 @@ const Footer = () => {
                             <p className={styles.footerListItem}>info@anuhirafaral.com</p>
                         </li>
                         <li>
-                            <address className={styles.footerListItem}>Shop No. 15, MG Road, Mumbai, Maharashtra, 400101</address>
+                            <address className={styles.footerListItem}>
+                                Shop No. 15, MG Road, Mumbai, Maharashtra, 400101
+                            </address>
                         </li>
                     </ul>
 
@@ -57,32 +64,52 @@ const Footer = () => {
                             <p className={styles.footerListTitle}>Opening Hours</p>
                         </li>
                         <li>
-                            <p className={styles.footerListItem}>Monday-Sunday: 10:00 AM - 9:00 PM</p>
+                            <p className={styles.footerListItem}>Mon - Sun: 10:00 AM - 9:00 PM</p>
                         </li>
                     </ul>
 
                     <form action="#" className={styles.footerForm}>
-                        <p className={styles.footerListTitle}>Book a Table</p>
+                        <p className={styles.footerListTitle}>Reserve a Table</p>
 
                         <div className={styles.inputWrapper}>
-                            <input type="text" name="full_name" required placeholder="Your Name" className={styles.inputField} />
-                            <input type="email" name="email_address" required placeholder="Email" className={styles.inputField} />
+                            <input
+                                type="text"
+                                name="full_name"
+                                required
+                                placeholder="Your Name"
+                                className={styles.inputField}
+                            />
+                            <input
+                                type="email"
+                                name="email_address"
+                                required
+                                placeholder="Email"
+                                className={styles.inputField}
+                            />
                         </div>
 
                         <div className={styles.inputWrapper}>
                             <select name="total_person" className={styles.inputField}>
-                                <option value="person">Person</option>
-                                <option value="2 person">2 Person</option>
-                                <option value="3 person">3 Person</option>
-                                <option value="4 person">4 Person</option>
-                                <option value="5 person">5 Person</option>
+                                <option value="">Select People</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Persons</option>
+                                <option value="3">3 Persons</option>
+                                <option value="4">4 Persons</option>
+                                <option value="5">5 Persons</option>
                             </select>
 
                             <input type="date" name="booking_date" className={styles.inputField} />
                         </div>
 
-                        <textarea name="message" required placeholder="Message" className={styles.inputField}></textarea>
-                        <button type="submit" className={styles.btn}>Book a Table</button>
+                        <textarea
+                            name="message"
+                            required
+                            placeholder="Your Message"
+                            className={styles.inputField}
+                        ></textarea>
+                        <button type="submit" className={styles.btn}>
+                            Book a Table
+                        </button>
                     </form>
 
                 </div>
@@ -91,7 +118,7 @@ const Footer = () => {
             <div className={styles.footerBottom}>
                 <div className={styles.container}>
                     <p className={styles.copyrightText}>
-                        &copy; 2022 <a href="#" className={styles.copyrightLink}>Anuhira Faral</a> All Rights Reserved.
+                        &copy; 2022 <a href="#" className={styles.copyrightLink}>Anuhira Faral</a> | All Rights Reserved.
                     </p>
                 </div>
             </div>

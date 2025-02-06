@@ -3,7 +3,7 @@
 /* Base Section Styles */
 .section {
     padding: 80px 20px;
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
 }
 

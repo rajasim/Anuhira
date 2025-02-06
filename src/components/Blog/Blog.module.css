@@ -1,9 +1,10 @@
+/* Section & Container */
 .section {
-    padding: 60px 0;
+    padding: 4rem 0;
 }
 
 .sectionDivider {
-    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #e0e0e0;
 }
 
 .white {
@@ -11,128 +12,156 @@
 }
 
 .blog {
-    position: relative;
-    overflow: hidden;
+    /* Additional blog-specific styling if needed */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.5rem;
 }
 
+/* Headings */
 .sectionSubtitle {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #444;
-    margin-bottom: 10px;
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .sectionTitle {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.span {
-    color: #e91e63;
+.highlight {
+    color: #ff8c00;
 }
 
 .sectionText {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem;
 }
 
+/* Blog List */
 .blogList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    padding: 0;
 }
 
+/* Blog Card */
 .blogCard {
-    flex: 1 1 calc(33.333% - 20px);
-    margin: 0;
+    background-color: #fafafa;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.blogCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Banner */
 .cardBanner {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, #ffcc80, #ff8c00);
+    height: 150px;
 }
 
 .badge {
-    font-size: 1rem;
-    color: #fff;
-    background-color: #e91e63;
-    padding: 5px 15px;
-    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #ff8c00;
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
 }
 
+/* Card Content */
 .cardContent {
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 .cardMetaWrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #999;
 }
 
 .cardMetaLink {
-    color: #888;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: inherit;
+}
+
+.icon {
+    margin-right: 0.5rem;
 }
 
 .metaInfo {
-    font-size: 1rem;
-    color: #666;
+    margin: 0;
 }
 
 .cardTitle {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.cardText {
-    font-size: 1.125rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.btnLink {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #e91e63;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.btnLink span {
-    margin-right: 10px;
+    margin-bottom: 0.75rem;
 }
 
 .cardTitleLink {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
 }
 
 .cardTitleLink:hover {
-    color: #e91e63;
+    color: #ff8c00;
 }
 
-ion-icon {
-    font-size: 1.5rem;
-    color: #e91e63;
+.cardText {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Button Link */
+.btnLink {
+    display: inline-flex;
+    align-items: center;
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.btnLink:hover {
+    color: #e67e00;
+}
+
+.arrowIcon {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btnLink:hover .arrowIcon {
+    transform: translateX(5px);
 }

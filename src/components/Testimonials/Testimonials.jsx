@@ -1,117 +1,74 @@
-import styles from './Testimonials.module.css';
+import React from "react";
+import styles from "./Testimonials.module.css";
+
+const testimonials = [
+    {
+        name: "Rahul Sharma",
+        title: "Founder of Spice Trail",
+        image: "./assets/images/avatar-1.jpg",
+        review:
+            "The biryani here is absolutely phenomenal! The aroma and flavors remind me of my childhood in Delhi.",
+    },
+    {
+        name: "Priya Singh",
+        title: "CEO Curry House",
+        image: "./assets/images/avatar-2.jpg",
+        review:
+            "I've never experienced such authentic Indian flavors. The masala dosa is a must-try!",
+    },
+    {
+        name: "Amit Patel",
+        title: "Head Chef at Saffron",
+        image: "./assets/images/avatar-3.jpg",
+        review:
+            "Their paneer tikka is out of this world. A delightful culinary journey into Indian tradition!",
+    },
+];
 
 const Testimonials = () => {
     return (
-        <section className={`${styles.section} ${styles.sectionDivider} ${styles.white} ${styles.testi}`}>
-            <div className={styles.container}>
-
-                <p className={styles.sectionSubtitle}>Testimonials</p>
-
-                <h2 className={styles.sectionTitle}>
-                    Our Customers <span className={styles.span}>Reviews</span>
+        <section className={styles.testimonialsSection}>
+            <div className={styles.testimonialsContainer}>
+                <p className={styles.testimonialsSubtitle}>Testimonials</p>
+                <h2 className={styles.testimonialsTitle}>
+                    Our Customers <span className={styles.highlight}>Reviews</span>
                 </h2>
-
-                <p className={styles.sectionText}>
-                    Food is any substance consumed to provide nutritional support for an organism.
+                <p className={styles.testimonialsDescription}>
+                    Discover what our customers say about us. Enjoy authentic flavors,
+                    traditional recipes, and unforgettable dining experiences.
                 </p>
 
-                <ul className={`${styles.testiList} ${styles.hasScrollbar}`}>
-
-                    <li className={styles.testiItem}>
-                        <div className={styles.testiCard}>
-
-                            <div className={styles.profileWrapper}>
-
-                                <figure className={styles.avatar}>
-                                    <img src="./assets/images/avatar-1.jpg" width="80" height="80" loading="lazy" alt="Robert William" />
-                                </figure>
-
+                <div className={styles.testimonialsGrid}>
+                    {testimonials.map((testimonial, index) => (
+                        <div key={index} className={styles.testimonialCard}>
+                            <div className={styles.testimonialProfile}>
+                                <img
+                                    src={testimonial.image}
+                                    alt={testimonial.name}
+                                    className={styles.testimonialAvatar}
+                                />
                                 <div>
-                                    <h3 className={styles.testiName}>Robert William</h3>
-                                    <p className={styles.testiTitle}>CEO Kingfisher</p>
+                                    <h3 className={styles.testimonialName}>
+                                        {testimonial.name}
+                                    </h3>
+                                    <p className={styles.testimonialTitle}>
+                                        {testimonial.title}
+                                    </p>
                                 </div>
-
                             </div>
-
-                            <blockquote className={styles.testiText}>
-                                "I would be lost without restaurant. I would like to personally thank you for your outstanding product."
+                            <blockquote className={styles.testimonialReview}>
+                                "{testimonial.review}"
                             </blockquote>
-
-                            <div className={styles.ratingWrapper}>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
+                            <div className={styles.testimonialRating}>
+                                {Array.from({ length: 5 }).map((_, i) => (
+                                    <span key={i} className={styles.star}>
+                                        &#9733;
+                                    </span>
+                                ))}
                             </div>
-
                         </div>
-                    </li>
-
-                    <li className={styles.testiItem}>
-                        <div className={styles.testiCard}>
-
-                            <div className={styles.profileWrapper}>
-
-                                <figure className={styles.avatar}>
-                                    <img src="./assets/images/avatar-2.jpg" width="80" height="80" loading="lazy" alt="Thomas Josef" />
-                                </figure>
-
-                                <div>
-                                    <h3 className={styles.testiName}>Thomas Josef</h3>
-                                    <p className={styles.testiTitle}>CEO Getforce</p>
-                                </div>
-
-                            </div>
-
-                            <blockquote className={styles.testiText}>
-                                "I would be lost without restaurant. I would like to personally thank you for your outstanding product."
-                            </blockquote>
-
-                            <div className={styles.ratingWrapper}>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li className={styles.testiItem}>
-                        <div className={styles.testiCard}>
-
-                            <div className={styles.profileWrapper}>
-
-                                <figure className={styles.avatar}>
-                                    <img src="./assets/images/avatar-3.jpg" width="80" height="80" loading="lazy" alt="Charles Richard" />
-                                </figure>
-
-                                <div>
-                                    <h3 className={styles.testiName}>Charles Richard</h3>
-                                    <p className={styles.testiTitle}>CEO Angela</p>
-                                </div>
-
-                            </div>
-
-                            <blockquote className={styles.testiText}>
-                                "I would be lost without restaurant. I would like to personally thank you for your outstanding product."
-                            </blockquote>
-
-                            <div className={styles.ratingWrapper}>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </div>
-
-                        </div>
-                    </li>
-
-                </ul>
-
+                    ))}
+                </div>
             </div>
         </section>
     );
