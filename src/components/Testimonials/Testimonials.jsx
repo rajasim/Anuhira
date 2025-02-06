@@ -5,21 +5,24 @@ const testimonials = [
     {
         name: "Rahul Sharma",
         title: "Founder of Spice Trail",
-        image: "./assets/images/avatar-1.jpg",
+        // Using Random User API for a male profile photo
+        image: "https://randomuser.me/api/portraits/men/45.jpg",
         review:
             "The biryani here is absolutely phenomenal! The aroma and flavors remind me of my childhood in Delhi.",
     },
     {
         name: "Priya Singh",
         title: "CEO Curry House",
-        image: "./assets/images/avatar-2.jpg",
+        // Using Random User API for a female profile photo
+        image: "https://randomuser.me/api/portraits/women/47.jpg",
         review:
             "I've never experienced such authentic Indian flavors. The masala dosa is a must-try!",
     },
     {
         name: "Amit Patel",
         title: "Head Chef at Saffron",
-        image: "./assets/images/avatar-3.jpg",
+        // Using Random User API for a male profile photo
+        image: "https://randomuser.me/api/portraits/men/52.jpg",
         review:
             "Their paneer tikka is out of this world. A delightful culinary journey into Indian tradition!",
     },

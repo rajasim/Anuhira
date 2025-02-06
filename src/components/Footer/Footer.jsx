@@ -118,7 +118,7 @@ const Footer = () => {
             <div className={styles.footerBottom}>
                 <div className={styles.container}>
                     <p className={styles.copyrightText}>
-                        &copy; 2022 <a href="#" className={styles.copyrightLink}>Anuhira Faral</a> | All Rights Reserved.
+                        &copy; 2025 <a href="#" className={styles.copyrightLink}>Anuhira</a> | All Rights Reserved.
                     </p>
                 </div>
             </div>

@@ -9,6 +9,12 @@ const Banner = () => {
 
                     <li className={`${styles.bannerItem} ${styles.bannerLg}`}>
                         <div className={styles.bannerCard}>
+                            {/* Banner image from Unsplash */}
+                            <img
+                                src="/phalahar.jpeg"
+                                alt="Exotic Indian Cuisine"
+                                className={styles.bannerImg}
+                            />
                             <div className={styles.bannerItemContent}>
                                 <p className={styles.bannerSubtitle}>New Arrival!</p>
                                 <h3 className={styles.bannerTitle}>
@@ -24,6 +30,12 @@ const Banner = () => {
 
                     <li className={`${styles.bannerItem} ${styles.bannerSm}`}>
                         <div className={styles.bannerCard}>
+                            {/* Banner image from Unsplash */}
+                            <img
+                                src="https://source.unsplash.com/featured/?south-indian-food"
+                                alt="Flavors of South India"
+                                className={styles.bannerImg}
+                            />
                             <div className={styles.bannerItemContent}>
                                 <h3 className={styles.bannerTitle}>Flavors of South India</h3>
                                 <p className={styles.bannerText}>
@@ -36,6 +48,12 @@ const Banner = () => {
 
                     <li className={`${styles.bannerItem} ${styles.bannerSm}`}>
                         <div className={styles.bannerCard}>
+                            {/* Banner image from Unsplash */}
+                            <img
+                                src="https://source.unsplash.com/featured/?north-indian-food,royal"
+                                alt="Royal North Indian Cuisine"
+                                className={styles.bannerImg}
+                            />
                             <div className={styles.bannerItemContent}>
                                 <h3 className={styles.bannerTitle}>Royal North Indian</h3>
                                 <p className={styles.bannerText}>
@@ -48,6 +66,12 @@ const Banner = () => {
 
                     <li className={`${styles.bannerItem} ${styles.bannerMd}`}>
                         <div className={styles.bannerCard}>
+                            {/* Banner image from Unsplash */}
+                            <img
+                                src="https://source.unsplash.com/featured/?indian-vegetarian,delights"
+                                alt="Vegetarian Delights"
+                                className={styles.bannerImg}
+                            />
                             <div className={styles.bannerItemContent}>
                                 <h3 className={styles.bannerTitle}>Vegetarian Delights</h3>
                                 <p className={styles.bannerText}>

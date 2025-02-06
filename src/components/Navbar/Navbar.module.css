@@ -36,8 +36,12 @@
 .navbarList {
     display: flex;
     padding-left: 0;
+    list-style: none;
 }
-
+.logoImage{
+    width: 60px;
+    height: 80px;
+}
 .navItem {
     margin: 0 1.5rem;
 }

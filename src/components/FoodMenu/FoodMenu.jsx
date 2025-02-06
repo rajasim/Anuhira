@@ -5,65 +5,147 @@ import styles from './FoodMenu.module.css';
 const menuItems = [
     {
         id: 1,
-        category: "Breakfast",
-        discount: "-10%",
-        title: "Aloo Paratha",
-        price: "35.00",
-        originalPrice: "40.00",
+        category: "Sweets",
+        discount: "-5%",
+        title: "Modak",
+        price: "40.00",
+        originalPrice: "45.00",
         rating: 5,
-        imageUrl: "https://source.unsplash.com/featured/?aloo-paratha"
+        imageUrl: "/Modak.jpeg"
     },
     {
         id: 2,
-        category: "Lunch",
-        discount: "-15%",
-        title: "Rajma Chawal",
-        price: "50.00",
-        originalPrice: "60.00",
+        category: "Namkeen",
+        discount: "-8%",
+        title: "Chakli",
+        price: "15.00",
+        originalPrice: "17.00",
         rating: 5,
-        imageUrl: "https://source.unsplash.com/featured/?rajma-chawal"
+        imageUrl: "/Chakli.jpeg"
     },
     {
         id: 3,
-        category: "Dinner",
-        discount: "-20%",
-        title: "Dal Makhani",
-        price: "65.00",
-        originalPrice: "80.00",
+        category: "Namkeen",
+        discount: "-10%",
+        title: "Bhakrwadi",
+        price: "20.00",
+        originalPrice: "22.00",
         rating: 5,
-        imageUrl: "https://source.unsplash.com/featured/?dal-makhani"
+        imageUrl: "/Bhakrwadi.jpeg"
     },
     {
         id: 4,
-        category: "Snacks",
-        discount: "-10%",
-        title: "Samosa",
-        price: "20.00",
-        originalPrice: "25.00",
+        category: "Sweets",
+        discount: "-12%",
+        title: "Puran Poli",
+        price: "50.00",
+        originalPrice: "60.00",
         rating: 5,
-        imageUrl: "https://source.unsplash.com/featured/?samosa"
+        imageUrl: "https://source.unsplash.com/featured/?puran-poli"
     },
     {
         id: 5,
-        category: "Sweets",
-        discount: "-5%",
-        title: "Gulab Jamun",
-        price: "30.00",
-        originalPrice: "35.00",
+        category: "Namkeen",
+        discount: "-15%",
+        title: "Gathiya",
+        price: "18.00",
+        originalPrice: "21.00",
         rating: 5,
-        imageUrl: "https://source.unsplash.com/featured/?gulab-jamun"
+        imageUrl: "/Gathiya.jpeg"
     },
     {
         id: 6,
-        category: "Breakfast",
-        discount: "-12%",
-        title: "Poha",
-        price: "25.00",
-        originalPrice: "28.00",
+        category: "Namkeen",
+        discount: "-7%",
+        title: "Sev",
+        price: "22.00",
+        originalPrice: "24.00",
         rating: 5,
-        imageUrl: "https://source.unsplash.com/featured/?poha"
-    }
+        imageUrl: "/Sev.jpeg"
+    },
+
+    // {
+    //     id: 7,
+    //     category: "Sweets",
+    //     discount: "-10%",
+    //     title: "Jalebi",
+    //     price: "35.00",
+    //     originalPrice: "39.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?jalebi"
+    // },
+    // {
+    //     id: 8,
+    //     category: "Sweets",
+    //     discount: "-8%",
+    //     title: "Gulab Jamun",
+    //     price: "30.00",
+    //     originalPrice: "33.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?gulab-jamun"
+    // },
+    // {
+    //     id: 9,
+    //     category: "Sweets",
+    //     discount: "-5%",
+    //     title: "Rasgulla",
+    //     price: "28.00",
+    //     originalPrice: "30.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?rasgulla"
+    // },
+    // {
+    //     id: 10,
+    //     category: "Sweets",
+    //     discount: "-12%",
+    //     title: "Laddu",
+    //     price: "32.00",
+    //     originalPrice: "36.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?laddu"
+    // },
+    // {
+    //     id: 11,
+    //     category: "Sweets",
+    //     discount: "-10%",
+    //     title: "Barfi",
+    //     price: "45.00",
+    //     originalPrice: "50.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?barfi"
+    // },
+    // {
+    //     id: 12,
+    //     category: "Sweets",
+    //     discount: "-15%",
+    //     title: "Mysore Pak",
+    //     price: "55.00",
+    //     originalPrice: "65.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?mysore-pak"
+    // },
+    // {
+    //     id: 13,
+    //     category: "Namkeen",
+    //     discount: "-9%",
+    //     title: "Fafda",
+    //     price: "25.00",
+    //     originalPrice: "28.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?fafda"
+    // },
+    // {
+    //     id: 14,
+    //     category: "Sweets",
+    //     discount: "-7%",
+    //     title: "Besan Ladoo",
+    //     price: "38.00",
+    //     originalPrice: "41.00",
+    //     rating: 5,
+    //     imageUrl: "https://source.unsplash.com/featured/?besan-ladoo"
+    // }
 ];
+
 
 // Filter options
 const filterOptions = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Sweets"];
