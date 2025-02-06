@@ -148,7 +148,7 @@ const menuItems = [
 
 
 // Filter options
-const filterOptions = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Sweets"];
+const filterOptions = ["All", "Snacks", "Sweets"];
 
 const FoodMenu = () => {
     const [activeFilter, setActiveFilter] = useState("All");

@@ -1,9 +1,6 @@
-/* FoodMenu.module.css */
-
 .section {
     padding: 4rem 2rem;
     background-color: #fffaf2;
-    /* light, warm background */
 }
 
 .container {
@@ -177,4 +174,51 @@
     font-size: 0.9rem;
     color: #999;
     text-decoration: line-through;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .foodMenuList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .sectionText {
+        font-size: 1rem;
+    }
+
+    .filterBtn {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .foodMenuList {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .cardTitle {
+        font-size: 1.1rem;
+    }
+
+    .priceText {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 0.9rem;
+    }
 }

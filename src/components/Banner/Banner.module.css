@@ -57,7 +57,7 @@
     border-radius: 8px;
 }
 
-/* New CSS to center banner images */
+/* Center and make images responsive */
 .bannerImg {
     display: block;
     margin: 0 auto;
@@ -102,4 +102,40 @@
 
 .btn:hover {
     background-color: #d81b60;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .bannerItem {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .bannerItem {
+        flex: 1 1 calc(100% - 20px);
+    }
+
+    .bannerTitle {
+        font-size: 1.5rem;
+    }
+
+    .bannerText {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerTitle {
+        font-size: 1.25rem;
+    }
+
+    .bannerText {
+        font-size: 0.9rem;
+    }
 }
