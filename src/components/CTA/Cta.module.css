@@ -1,93 +1,76 @@
+/* Cta.module.css */
+
 .section {
-    padding: 60px 0;
-    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
 }
 
 .sectionDivider {
-    border-bottom: 1px solid #eaeaea;
+    border-top: 2px solid #ffa500;
+    /* Vibrant orange divider */
 }
 
-.white {
-    background-color: #fff;
-}
-
-.cta {
-    position: relative;
-    overflow: hidden;
+/* Orange background for the entire section */
+.orangeBackground {
+    background-color: #fff3e0;
+    /* Very light orange */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
 }
 
 .ctaContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-}
-
-.sectionTitle {
-    font-size: 2.5rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.span {
-    color: #e91e63;
-}
-
-.sectionText {
-    font-size: 1.125rem;
-    color: #555;
-    margin-bottom: 30px;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.btn {
-    padding: 15px 40px;
-    background-color: #e91e63;
-    color: #fff;
-    border: none;
+.sectionTitle {
+    font-size: 2.8rem;
+    color: #ff8c00;
+    /* Dark orange for the title */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.span {
+    display: block;
+    font-size: 1.5rem;
+    color: #ffa500;
+    /* Standard orange for the subtitle */
+    margin-top: 0.5rem;
+}
+
+.sectionText {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.additionalText {
     font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #ff8c00;
+    /* Dark orange button */
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: 50px;
     transition: background-color 0.3s ease;
 }
 
 .btnHover:hover {
-    background-color: #d81b60;
-}
-
-.w100 {
-    width: 100%;
-}
-
-.ctaImg {
-    max-width: 100%;
-}
-
-.absImg {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    transform: scale(1.2);
-}
-
-.scaleUpAnim {
-    animation: scaleUp 1s ease-in-out;
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
+    background-color: #ffa500;
+    /* Lighter orange on hover */
 }

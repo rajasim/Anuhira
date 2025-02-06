@@ -1,191 +1,136 @@
+import React, { useState } from 'react';
 import styles from './FoodMenu.module.css';
 
+// Data for Indian Gharal (homestyle) fare
+const menuItems = [
+    {
+        id: 1,
+        category: "Breakfast",
+        discount: "-10%",
+        title: "Aloo Paratha",
+        price: "35.00",
+        originalPrice: "40.00",
+        rating: 5,
+        imageUrl: "https://source.unsplash.com/featured/?aloo-paratha"
+    },
+    {
+        id: 2,
+        category: "Lunch",
+        discount: "-15%",
+        title: "Rajma Chawal",
+        price: "50.00",
+        originalPrice: "60.00",
+        rating: 5,
+        imageUrl: "https://source.unsplash.com/featured/?rajma-chawal"
+    },
+    {
+        id: 3,
+        category: "Dinner",
+        discount: "-20%",
+        title: "Dal Makhani",
+        price: "65.00",
+        originalPrice: "80.00",
+        rating: 5,
+        imageUrl: "https://source.unsplash.com/featured/?dal-makhani"
+    },
+    {
+        id: 4,
+        category: "Snacks",
+        discount: "-10%",
+        title: "Samosa",
+        price: "20.00",
+        originalPrice: "25.00",
+        rating: 5,
+        imageUrl: "https://source.unsplash.com/featured/?samosa"
+    },
+    {
+        id: 5,
+        category: "Sweets",
+        discount: "-5%",
+        title: "Gulab Jamun",
+        price: "30.00",
+        originalPrice: "35.00",
+        rating: 5,
+        imageUrl: "https://source.unsplash.com/featured/?gulab-jamun"
+    },
+    {
+        id: 6,
+        category: "Breakfast",
+        discount: "-12%",
+        title: "Poha",
+        price: "25.00",
+        originalPrice: "28.00",
+        rating: 5,
+        imageUrl: "https://source.unsplash.com/featured/?poha"
+    }
+];
+
+// Filter options
+const filterOptions = ["All", "Breakfast", "Lunch", "Dinner", "Snacks", "Sweets"];
+
 const FoodMenu = () => {
+    const [activeFilter, setActiveFilter] = useState("All");
+
+    // Filter the menu items based on the active category
+    const filteredMenuItems =
+        activeFilter === "All"
+            ? menuItems
+            : menuItems.filter((item) => item.category === activeFilter);
+
     return (
         <section className={`${styles.section} ${styles.foodMenu}`} id="food-menu">
             <div className={styles.container}>
-                <p className={styles.sectionSubtitle}>Popular Indian Fare</p>
+                <p className={styles.sectionSubtitle}>Authentic Gharal Indian Fare</p>
                 <h2 className={styles.sectionTitle}>
-                    Our Delicious <span className={styles.span}>Foods</span>
+                    Our Homestyle <span className={styles.span}>Menus</span>
                 </h2>
                 <p className={styles.sectionText}>
-                    Enjoy a variety of authentic Indian snacks and sweets made with passion and tradition.
+                    Indulge in the rich flavors of Indian home cooking—each dish is prepared with love, tradition, and the finest locally sourced ingredients.
                 </p>
 
                 <ul className={styles.filterList}>
-                    <li>
-                        <button className={`${styles.filterBtn} ${styles.active}`}>All</button>
-                    </li>
-                    <li>
-                        <button className={styles.filterBtn}>Snacks</button>
-                    </li>
-                    <li>
-                        <button className={styles.filterBtn}>Sweets</button>
-                    </li>
-                    <li>
-                        <button className={styles.filterBtn}>Street Food</button>
-                    </li>
-                    <li>
-                        <button className={styles.filterBtn}>Breakfast</button>
-                    </li>
+                    {filterOptions.map((filter) => (
+                        <li key={filter}>
+                            <button
+                                className={`${styles.filterBtn} ${activeFilter === filter ? styles.active : ""}`}
+                                onClick={() => setActiveFilter(filter)}
+                            >
+                                {filter}
+                            </button>
+                        </li>
+                    ))}
                 </ul>
 
                 <ul className={styles.foodMenuList}>
-                    <li>
-                        <div className={styles.foodMenuCard}>
-                            <div className={styles.cardBanner}>
-                                {/* Image removed – placeholder area */}
-                                <div className={styles.badge}>-15%</div>
-                                <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
-                            </div>
-                            <div className={styles.wrapper}>
-                                <p className={styles.category}>Snacks</p>
-                                <div className={styles.ratingWrapper}>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
+                    {filteredMenuItems.map((item) => (
+                        <li key={item.id}>
+                            <div className={styles.foodMenuCard}>
+                                <div className={styles.cardBanner}>
+                                    <img src={item.imageUrl} alt={item.title} className={styles.cardImage} />
+                                    <div className={styles.badge}>{item.discount}</div>
+                                    <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
+                                </div>
+                                <div className={styles.wrapper}>
+                                    <p className={styles.category}>{item.category}</p>
+                                    <div className={styles.ratingWrapper}>
+                                        {Array.from({ length: item.rating }).map((_, i) => (
+                                            <ion-icon key={i} name="star"></ion-icon>
+                                        ))}
+                                    </div>
+                                </div>
+                                <h3 className={styles.cardTitle}>{item.title}</h3>
+                                <div className={styles.priceWrapper}>
+                                    <p className={styles.priceText}>Price:</p>
+                                    <data className={styles.price} value={item.price}>
+                                        ₹{item.price}
+                                    </data>
+                                    <del className={styles.del} value={item.originalPrice}>
+                                        ₹{item.originalPrice}
+                                    </del>
                                 </div>
                             </div>
-                            <h3 className={styles.cardTitle}>Chakli Delight</h3>
-                            <div className={styles.priceWrapper}>
-                                <p className={styles.priceText}>Price:</p>
-                                <data className={styles.price} value="49.00">₹49.00</data>
-                                <del className={styles.del} value="69.00">₹69.00</del>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className={styles.foodMenuCard}>
-                            <div className={styles.cardBanner}>
-                                {/* Image removed – placeholder area */}
-                                <div className={styles.badge}>-10%</div>
-                                <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
-                            </div>
-                            <div className={styles.wrapper}>
-                                <p className={styles.category}>Sweets</p>
-                                <div className={styles.ratingWrapper}>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                </div>
-                            </div>
-                            <h3 className={styles.cardTitle}>Laaldu Sweet Treat</h3>
-                            <div className={styles.priceWrapper}>
-                                <p className={styles.priceText}>Price:</p>
-                                <data className={styles.price} value="29.00">₹29.00</data>
-                                <del className={styles.del} value="39.00">₹39.00</del>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className={styles.foodMenuCard}>
-                            <div className={styles.cardBanner}>
-                                {/* Image removed – placeholder area */}
-                                <div className={styles.badge}>-20%</div>
-                                <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
-                            </div>
-                            <div className={styles.wrapper}>
-                                <p className={styles.category}>Snacks</p>
-                                <div className={styles.ratingWrapper}>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                </div>
-                            </div>
-                            <h3 className={styles.cardTitle}>Samosa Special</h3>
-                            <div className={styles.priceWrapper}>
-                                <p className={styles.priceText}>Price:</p>
-                                <data className={styles.price} value="39.00">₹39.00</data>
-                                <del className={styles.del} value="49.00">₹49.00</del>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className={styles.foodMenuCard}>
-                            <div className={styles.cardBanner}>
-                                {/* Image removed – placeholder area */}
-                                <div className={styles.badge}>-25%</div>
-                                <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
-                            </div>
-                            <div className={styles.wrapper}>
-                                <p className={styles.category}>Street Food</p>
-                                <div className={styles.ratingWrapper}>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                </div>
-                            </div>
-                            <h3 className={styles.cardTitle}>Vada Pav Classic</h3>
-                            <div className={styles.priceWrapper}>
-                                <p className={styles.priceText}>Price:</p>
-                                <data className={styles.price} value="19.00">₹19.00</data>
-                                <del className={styles.del} value="25.00">₹25.00</del>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className={styles.foodMenuCard}>
-                            <div className={styles.cardBanner}>
-                                {/* Image removed – placeholder area */}
-                                <div className={styles.badge}>-5%</div>
-                                <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
-                            </div>
-                            <div className={styles.wrapper}>
-                                <p className={styles.category}>Snacks</p>
-                                <div className={styles.ratingWrapper}>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                </div>
-                            </div>
-                            <h3 className={styles.cardTitle}>Dhokla Delight</h3>
-                            <div className={styles.priceWrapper}>
-                                <p className={styles.priceText}>Price:</p>
-                                <data className={styles.price} value="59.00">₹59.00</data>
-                                <del className={styles.del} value="69.00">₹69.00</del>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div className={styles.foodMenuCard}>
-                            <div className={styles.cardBanner}>
-                                {/* Image removed – placeholder area */}
-                                <div className={styles.badge}>-15%</div>
-                                <button className={`${styles.btn} ${styles.foodMenuBtn}`}>Order Now</button>
-                            </div>
-                            <div className={styles.wrapper}>
-                                <p className={styles.category}>Breakfast</p>
-                                <div className={styles.ratingWrapper}>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                    <ion-icon name="star"></ion-icon>
-                                </div>
-                            </div>
-                            <h3 className={styles.cardTitle}>Idli Sambar Combo</h3>
-                            <div className={styles.priceWrapper}>
-                                <p className={styles.priceText}>Price:</p>
-                                <data className={styles.price} value="49.00">₹49.00</data>
-                                <del className={styles.del} value="69.00">₹69.00</del>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>

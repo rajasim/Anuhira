@@ -1,179 +1,180 @@
-/* Section & Container */
-.section {
-    padding: 60px 0;
-    position: relative;
-}
+/* FoodMenu.module.css */
 
-.foodMenu {
-    /* Additional food menu–specific styles if needed */
+.section {
+    padding: 4rem 2rem;
+    background-color: #fffaf2;
+    /* light, warm background */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1rem;
 }
 
-/* Headings & Text */
 .sectionSubtitle {
+    font-size: 1.2rem;
+    color: #d35400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
     text-align: center;
-    color: #ff6347;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .sectionTitle {
+    font-size: 2.5rem;
+    color: #d35400;
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 1rem;
 }
 
 .span {
-    display: block;
-    color: #ff6347;
-    font-weight: normal;
+    color: #e67e22;
 }
 
 .sectionText {
-    text-align: center;
-    font-size: 1em;
+    font-size: 1.1rem;
     color: #555;
-    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Filter List */
 .filterList {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 .filterBtn {
-    background: none;
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    margin: 0 5px;
+    background: transparent;
+    border: 1px solid #d35400;
+    color: #d35400;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
+.filterBtn:hover,
 .active {
-    background-color: #ff6347;
+    background-color: #d35400;
     color: #fff;
 }
 
-/* Food Menu List & Cards */
 .foodMenuList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .foodMenuCard {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
     background-color: #fff;
-    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Card Banner */
+.foodMenuCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 .cardBanner {
     position: relative;
+    overflow: hidden;
     height: 200px;
-    background-color: #f0f0f0;
-    /* Placeholder background */
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .badge {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ff6347;
+    top: 1rem;
+    left: 1rem;
+    background-color: #e67e22;
     color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
-
-/* Button Styles */
-.btn {
-    background-color: #ff6347;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
 
 .foodMenuBtn {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #d35400;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #e5533e;
+.foodMenuBtn:hover {
+    background-color: #e67e22;
 }
 
-/* Card Content */
 .wrapper {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
 .category {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #888;
 }
 
-.ratingWrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2px;
+.ratingWrapper ion-icon {
+    font-size: 1rem;
+    color: #f1c40f;
+    margin-left: 0.2rem;
 }
 
 .cardTitle {
-    font-size: 1.2em;
+    font-size: 1.3rem;
     color: #333;
-    margin: 10px 0;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Price Section */
 .priceWrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
+    padding: 0 1rem 1rem 1rem;
+    gap: 0.5rem;
 }
 
 .priceText {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: #555;
 }
 
 .price {
-    font-size: 1.1em;
+    font-size: 1rem;
     font-weight: bold;
-    color: #333;
+    color: #d35400;
 }
 
 .del {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: #999;
     text-decoration: line-through;
 }

@@ -1,52 +1,102 @@
+import React, { useEffect, useState } from 'react';
 import styles from './Promo.module.css';
 
+const initialPromoData = [
+    {
+        id: 1,
+        title: 'Chakli Delight',
+        description: 'Savor the crispy, spicy taste of our freshly made Chakli!',
+        details: [
+            'Handcrafted with traditional spices.',
+            'Perfect for tea time or as a snack.',
+            'Limited time offer – try it now!'
+        ]
+    },
+    {
+        id: 2,
+        title: 'Bhakarwadi Bonanza',
+        description: 'Enjoy the sweet and spicy fusion in every bite of Bhakarwadi!',
+        details: [
+            'Rolls packed with a unique blend of flavors.',
+            'A must-try traditional Indian snack.',
+            'Available for a limited period.'
+        ]
+    },
+    {
+        id: 3,
+        title: 'Khandvi Magic',
+        description: 'Experience the melt-in-your-mouth goodness of Khandvi!',
+        details: [
+            'Soft, spiced, and rolled to perfection.',
+            'Served with a tangy tempering.',
+            'Freshly prepared daily.'
+        ]
+    },
+    {
+        id: 4,
+        title: 'Dhokla Treat',
+        description: 'Relish the fluffy and tangy taste of our authentic Dhokla!',
+        details: [
+            'Light and steamed to perfection.',
+            'Served with a side of green chutney.',
+            'Ideal for a healthy snack.'
+        ]
+    }
+];
+
 const Promo = () => {
+    const [promoData, setPromoData] = useState(initialPromoData);
+
+    useEffect(() => {
+        // Function to fetch a random food image from the Foodish API
+        const fetchFoodImage = async () => {
+            try {
+                const response = await fetch('https://foodish-api.herokuapp.com/api/');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch image');
+                }
+                const data = await response.json();
+                return data.image;
+            } catch (error) {
+                console.error('Error fetching food image:', error);
+                // Fallback image URL if the API call fails
+                return 'https://via.placeholder.com/300?text=Food';
+            }
+        };
+
+        // Fetch an image for each promo item
+        const loadImages = async () => {
+            const updatedPromos = await Promise.all(
+                initialPromoData.map(async (promo) => {
+                    const imageUrl = await fetchFoodImage();
+                    return { ...promo, imageUrl };
+                })
+            );
+            setPromoData(updatedPromos);
+        };
+
+        loadImages();
+    }, []);
+
     return (
         <div className={styles.promoContainer}>
-            <div className={styles.promoCard}>
-                <img src="https://via.placeholder.com/150?text=Chole+Bhature" alt="Promo 1" />
-                <h3>Chole Bhature Combo - 20% Off</h3>
-                <p>Get 20% off on our delicious Chole Bhature combo meal today!</p>
-                <ul>
-                    <li>Freshly made Bhature with spicy Chole.</li>
-                    <li>Accompanied by tangy pickle and yogurt.</li>
-                    <li>Offer valid until end of the week.</li>
-                </ul>
-                <button className={styles.btn}>Order Now</button>
-            </div>
-            <div className={styles.promoCard}>
-                <img src="https://via.placeholder.com/150?text=Masala+Dosa" alt="Promo 2" />
-                <h3>Masala Dosa Special</h3>
-                <p>Enjoy a Masala Dosa with free coconut chutney and sambar!</p>
-                <ul>
-                    <li>Crunchy dosa with spiced potato filling.</li>
-                    <li>Fresh chutneys and hot sambar.</li>
-                    <li>Only valid for dine-in customers.</li>
-                </ul>
-                <button className={styles.btn}>Order Now</button>
-            </div>
-            <div className={styles.promoCard}>
-                <img src="https://via.placeholder.com/150?text=Paneer+Tikka" alt="Promo 3" />
-                <h3>Paneer Tikka Bonanza</h3>
-                <p>Get a free soft drink with every order of Paneer Tikka!</p>
-                <ul>
-                    <li>Grilled to perfection with a smoky flavor.</li>
-                    <li>Served with green chutney and salad.</li>
-                    <li>Offer valid only on weekends.</li>
-                </ul>
-                <button className={styles.btn}>Order Now</button>
-            </div>
-            <div className={styles.promoCard}>
-                <img src="https://via.placeholder.com/150?text=Samosa" alt="Promo 4" />
-                <h3>Samosa Fest - Buy 1 Get 1 Free</h3>
-                <p>Buy one crispy Samosa and get one free, only this week!</p>
-                <ul>
-                    <li>Hot and crispy, filled with spicy potatoes.</li>
-                    <li>Perfect with tamarind chutney or mint chutney.</li>
-                    <li>Limited time offer, valid for delivery and takeaway.</li>
-                </ul>
-                <button className={styles.btn}>Order Now</button>
-            </div>
+            {promoData.map((promo) => (
+                <div key={promo.id} className={styles.promoCard}>
+                    {promo.imageUrl ? (
+                        <img src={promo.imageUrl} alt={promo.title} className={styles.promoImage} />
+                    ) : (
+                        <div className={styles.loader}>Loading...</div>
+                    )}
+                    <h3>{promo.title}</h3>
+                    <p>{promo.description}</p>
+                    <ul>
+                        {promo.details.map((detail, index) => (
+                            <li key={index}>{detail}</li>
+                        ))}
+                    </ul>
+                    <button className={styles.btn}>Order Now</button>
+                </div>
+            ))}
         </div>
     );
 };

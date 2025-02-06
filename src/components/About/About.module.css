@@ -1,84 +1,89 @@
-/* Section & Container */
+/* About.module.css */
+
 .section {
-    padding: 60px 0;
+    padding: 4rem 2rem;
     position: relative;
 }
 
 .sectionDivider {
-    border-top: 1px solid #ddd;
+    border-top: 2px solid #e0e0e0;
 }
 
-.gray {
-    background-color: #f7f7f7;
+.orange {
+    background-color: #fff5e6;
+    /* Light orange background */
 }
-
-
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1rem;
+}
+
+.about {
     text-align: center;
 }
 
-/* Content Styles */
 .aboutContent {
     margin: 0 auto;
+    max-width: 800px;
 }
 
 .sectionTitle {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #333;
+    font-size: 2.5rem;
+    color: #d35400;
+    /* Deep, premium orange */
+    margin-bottom: 1rem;
+    position: relative;
 }
 
-.span {
+.sectionTitle .span {
     display: block;
-    color: #ff6347;
-    font-weight: normal;
+    font-size: 1.5rem;
+    color: #e67e22;
+    /* Lighter orange for the sub-title */
+    margin-top: 0.5rem;
 }
 
 .sectionText {
-    font-size: 1em;
+    font-size: 1.1rem;
     color: #555;
-    margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
-/* List Styles */
 .aboutList {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin-bottom: 2rem;
 }
 
 .aboutItem {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
 }
 
 .aboutItem ion-icon {
-    font-size: 1.2em;
-    color: #ff6347;
-    margin-right: 10px;
+    font-size: 1.25rem;
+    color: #d35400;
+    margin-right: 0.5rem;
 }
 
-/* Button Styles */
 .btn {
-    background-color: #ff6347;
+    background-color: #d35400;
     color: #fff;
-    padding: 12px 30px;
+    padding: 0.75rem 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    text-transform: uppercase;
     transition: background-color 0.3s ease;
 }
 
 .btnHover:hover {
-    background-color: #e5533e;
+    background-color: #e67e22;
 }
