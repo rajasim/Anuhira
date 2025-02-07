@@ -1,132 +1,133 @@
 .header {
-    background-color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
 }
 
 .span {
-    color: #ff6347;
+  color: #ff6347;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbarList {
-    display: flex;
-    padding-left: 0;
-    list-style: none;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }
-.logoImage{
-    width: 60px;
-    height: 80px;
+.logoImage {
+  width: 60px;
+  height: 80px;
 }
 .navItem {
-    margin: 0 1.5rem;
+  margin: 0 1.5rem;
 }
 
 .navbarLink {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .navbarLink:hover {
-    color: #ff6347;
+  color: #ff6347;
 }
 
 .headerBtnGroup {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .searchBtn {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: #333;
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #333;
+  cursor: pointer;
 }
 
 .btn {
-    background-color: #ff6347;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background: linear-gradient(45deg, #f89617, #f0f03b);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+
 .btnHover:hover {
-    background-color: #ff4500;
+  background-color: #ff4500;
 }
 
 .navToggleBtn {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .navToggleBtn .line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
 }
 
 .navbar.open {
-    display: block;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #fff;
-        padding: 1rem;
-    }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+  }
 
-    .navbar.open {
-        display: flex;
-    }
+  .navbar.open {
+    display: flex;
+  }
 
-    .navItem {
-        margin: 1rem 0;
-    }
+  .navItem {
+    margin: 1rem 0;
+  }
 
-    .navToggleBtn {
-        display: flex;
-    }
+  .navToggleBtn {
+    display: flex;
+  }
 }

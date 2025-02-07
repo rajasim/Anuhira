@@ -6,42 +6,42 @@ const testimonials = [
     title: "Food Blogger",
     image: "https://randomuser.me/api/portraits/women/33.jpg",
     review:
-      "The Sabudana Khichdi was perfectly cooked, not sticky at all!  A great option for a light and flavorful meal during fasting.",
+      "The Chakli was absolutely delightful—crispy, perfectly spiced, and reminiscent of traditional recipes.",
   },
   {
     name: "Vikram Singh",
     title: "Software Engineer",
     image: "https://randomuser.me/api/portraits/men/61.jpg",
     review:
-      "Tried the Vada Pav and it was just like the ones I have in Mumbai!  The chutneys were amazing.",
+      "I tried the Papad and it was incredibly crunchy with an authentic seasoning that reminded me of home.",
   },
   {
     name: "Neha Reddy",
     title: "Yoga Instructor",
     image: "https://randomuser.me/api/portraits/women/28.jpg",
     review:
-      "The Rajgira Puri and Aloo Sabzi were a healthy and delicious way to break my fast.  Highly recommend!",
+      "The Bhakarwadi was a burst of flavors—sweet, spicy, and perfectly crunchy. It’s my go-to snack during fasting.",
   },
   {
     name: "Meera Patel",
     title: "Homemaker",
     image: "https://randomuser.me/api/portraits/women/42.jpg",
     review:
-      "The Paneer Tikka Masala was rich and creamy, and the paneer was perfectly soft.  A true vegetarian delight!",
+      "I loved the mix of Chakli and Papad. Both were delightfully crispy and packed with traditional spices that made every bite special.",
   },
   {
     name: "Rohan Gupta",
     title: "Student",
     image: "https://randomuser.me/api/portraits/men/25.jpg",
     review:
-      "I loved the Dal Makhani and Jeera Rice.  It tasted just like my mom's cooking!",
+      "The combination of Bhakarwadi and Chakli is my new favorite. The flavors are rich and capture the true essence of Indian farsan.",
   },
   {
     name: "Shalini Kapoor",
     title: "Doctor",
     image: "https://randomuser.me/api/portraits/women/55.jpg",
     review:
-      "The Vegetable Biryani was fragrant and flavorful, with a perfect blend of spices and vegetables.",
+      "The snack platter featuring Chakli, Papad, and Bhakarwadi was a hit at our family gathering—each bite was a burst of authentic flavor.",
   },
 ];
 
