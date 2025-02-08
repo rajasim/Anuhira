@@ -82,6 +82,27 @@
   transition: background-color 0.3s;
 }
 
+@keyframes colorChange {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.animatedtext {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  animation: colorChange 3s ease alternate-reverse;
+  background: linear-gradient(90deg, #f7b731, #26de81, #2bcbba);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
 
 .btnHover:hover {
   background-color: #ff4500;

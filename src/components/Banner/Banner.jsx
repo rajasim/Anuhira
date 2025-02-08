@@ -30,7 +30,7 @@ const Banner = () => {
               </div>
             </div>
           </li>
-
+          {/* 
           <li className={`${styles.bannerItem} ${styles.bannerSm}`}>
             <div className={styles.bannerCard}>
               <div className={styles.bannerItemContent}>
@@ -59,7 +59,7 @@ const Banner = () => {
                 <button className={styles.btn}>Order Now</button>
               </div>
             </div>
-          </li>
+          </li> */}
 
           <li className={`${styles.bannerItem} ${styles.bannerMd}`}>
             <div className={styles.bannerCard}>
@@ -69,14 +69,6 @@ const Banner = () => {
                 alt="Vegetarian Delights"
                 className={styles.bannerImg}
               />
-              <div className={styles.bannerItemContent}>
-                <h3 className={styles.bannerTitle}>Vegetarian Delights</h3>
-                <p className={styles.bannerText}>
-                  Savor the best of Indian vegetarian cuisine with a variety of
-                  sabzis, lentil dals, and paneer specialties.
-                </p>
-                <button className={styles.btn}>Explore Menu</button>
-              </div>
             </div>
           </li>
         </ul>
