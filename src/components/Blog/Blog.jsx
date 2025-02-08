@@ -36,7 +36,7 @@ const Blog = () => {
 
                                 <h3 className={styles.cardTitle}>
                                     <a href="#" className={styles.cardTitleLink}>
-                                        Traditional Sabudana Khichdi for Fasting
+                                        Traditional Sabudana Chiwada for Fasting
                                     </a>
                                 </h3>
 

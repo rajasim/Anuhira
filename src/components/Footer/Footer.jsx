@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -46,14 +45,14 @@ const Footer = () => {
               <p className={styles.footerListTitle}>Contact Info</p>
             </li>
             <li>
-              <p className={styles.footerListItem}>+91 123 456 7890</p>
+              <p className={styles.footerListItem}>+919822341010</p>
             </li>
             <li>
               <p className={styles.footerListItem}>info@anuhirafaral.com</p>
             </li>
             <li>
               <address className={styles.footerListItem}>
-                Shop No. 15, MG Road, Mumbai, Maharashtra, 400101
+                Shahu Corner, Seva Lodge, Ichalkaranji, Maharashtra 416115
               </address>
             </li>
           </ul>

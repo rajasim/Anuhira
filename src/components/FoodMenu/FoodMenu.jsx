@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./FoodMenu.module.css";
 
 // Data for Indian Gharal (homestyle) fare
@@ -6,50 +6,50 @@ const menuItems = [
   {
     id: 1,
     category: "Sweets",
-    discount: "-5%",
-    title: "Modak",
-    price: "40.00",
-    originalPrice: "45.00",
+    discount: "-50%",
+    title: "Shabudana Chiwda",
+    price: "200.00",
+    originalPrice: "400.00",
     rating: 5,
-    imageUrl: "/Modak.jpeg",
+    imageUrl: "/shabudana.jpg",
   },
   {
     id: 2,
     category: "Namkeen",
-    // discount: "-8%",
+    discount: "-50%",
     title: "Chakli",
     price: "300.00/KG",
-    originalPrice: "400.00/KG",
+    originalPrice: "600.00/KG",
     rating: 5,
     imageUrl: "/Chakli.jpg",
   },
   {
     id: 3,
     category: "Namkeen",
-    discount: "-10%",
+    discount: "-50%",
     title: "Bhakrwadi",
-    price: "20.00",
-    originalPrice: "22.00",
+    price: "280.00",
+    originalPrice: "560.00",
     rating: 5,
     imageUrl: "/bhakarwadi.jpg",
   },
   {
     id: 4,
     category: "Snacks",
-    discount: "-12%",
-    title: "pohe",
-    price: "50.00",
-    originalPrice: "60.00",
+    discount: "-50%",
+    title: "Pohe Chiwda",
+    price: "280.00",
+    originalPrice: "560.00",
     rating: 5,
     imageUrl: "/pohe.jpg",
   },
   {
     id: 5,
     category: "Namkeen",
-    discount: "-15%",
-    title: "Gathiya",
-    price: "18.00",
-    originalPrice: "21.00",
+    discount: "-50%",
+    title: "Aloo Masala and Aloo palak",
+    price: "280.00",
+    originalPrice: "560.00",
     rating: 5,
     imageUrl: "/Gathiya.jpg",
   },
@@ -63,87 +63,6 @@ const menuItems = [
     rating: 5,
     imageUrl: "/Sev.jpg",
   },
-
-  // {
-  //     id: 7,
-  //     category: "Sweets",
-  //     discount: "-10%",
-  //     title: "Jalebi",
-  //     price: "35.00",
-  //     originalPrice: "39.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?jalebi"
-  // },
-  // {
-  //     id: 8,
-  //     category: "Sweets",
-  //     discount: "-8%",
-  //     title: "Gulab Jamun",
-  //     price: "30.00",
-  //     originalPrice: "33.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?gulab-jamun"
-  // },
-  // {
-  //     id: 9,
-  //     category: "Sweets",
-  //     discount: "-5%",
-  //     title: "Rasgulla",
-  //     price: "28.00",
-  //     originalPrice: "30.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?rasgulla"
-  // },
-  // {
-  //     id: 10,
-  //     category: "Sweets",
-  //     discount: "-12%",
-  //     title: "Laddu",
-  //     price: "32.00",
-  //     originalPrice: "36.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?laddu"
-  // },
-  // {
-  //     id: 11,
-  //     category: "Sweets",
-  //     discount: "-10%",
-  //     title: "Barfi",
-  //     price: "45.00",
-  //     originalPrice: "50.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?barfi"
-  // },
-  // {
-  //     id: 12,
-  //     category: "Sweets",
-  //     discount: "-15%",
-  //     title: "Mysore Pak",
-  //     price: "55.00",
-  //     originalPrice: "65.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?mysore-pak"
-  // },
-  // {
-  //     id: 13,
-  //     category: "Namkeen",
-  //     discount: "-9%",
-  //     title: "Fafda",
-  //     price: "25.00",
-  //     originalPrice: "28.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?fafda"
-  // },
-  // {
-  //     id: 14,
-  //     category: "Sweets",
-  //     discount: "-7%",
-  //     title: "Besan Ladoo",
-  //     price: "38.00",
-  //     originalPrice: "41.00",
-  //     rating: 5,
-  //     imageUrl: "https://source.unsplash.com/featured/?besan-ladoo"
-  // }
 ];
 
 // Filter options
