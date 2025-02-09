@@ -77,7 +77,7 @@ const Footer = () => {
             <a href="#" className={styles.copyrightLink}>
               Anuhira
             </a>{" "}
-            | All Rights Reserved. | Made with 💖 By Sourabh
+            | All Rights Reserved. | Made with 💖 By Sourabh & ABM Group
           </p>
         </div>
       </div>

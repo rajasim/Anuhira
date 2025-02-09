@@ -37,7 +37,7 @@ const Hero = () => {
             className={`${styles.btn} ${styles.fadeInUp}`}
             style={{ animationDelay: "0.8s" }}
           >
-            Savour the Tradition
+            Savor the Tradition
           </button>
         </div>
 

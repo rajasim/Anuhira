@@ -84,7 +84,7 @@ const Blog = () => {
                 </h3>
 
                 <p className={styles.cardText}>
-                  Learn the art of crafting crispy, gluten-free dosas using
+                  Learn the art of crafting crispy, gluten-free Pohe using
                   alternative flours and wholesome ingredients—perfect for your
                   fasting routine.
                 </p>
@@ -115,12 +115,12 @@ const Blog = () => {
 
                 <h3 className={styles.cardTitle}>
                   <a href="#" className={styles.cardTitleLink}>
-                    Easy Farali Khandvi for Detox Days
+                    Easy Farali Chiwada for Detox Days
                   </a>
                 </h3>
 
                 <p className={styles.cardText}>
-                  Master the delicate art of making soft and tangy Khandvi—a
+                  Master the delicate art of making soft and tangy Chiwada
                   detoxifying Gujarati snack made with gram flour and tempered
                   with spices.
                 </p>
