@@ -38,10 +38,12 @@
   padding-left: 0;
   list-style: none;
 }
+
 .logoImage {
   width: 60px;
   height: 80px;
 }
+
 .navItem {
   margin: 0 1.5rem;
 }
@@ -81,6 +83,9 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+.mainlogo {
+  width: 50px;
+}
 
 @keyframes colorChange {
   0% {
@@ -96,7 +101,7 @@
   font-weight: bold;
   text-align: center;
   animation: colorChange 3s ease alternate-reverse;
-  background: linear-gradient(90deg, #f7b731, #26de81, #2bcbba);
+  background: linear-gradient(90deg, #f7b731, #f0fd30, #fa8729);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

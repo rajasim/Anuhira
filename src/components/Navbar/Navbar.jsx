@@ -72,13 +72,7 @@ const Navbar = () => {
         </nav>
 
         <div className={styles.headerBtnGroup}>
-          <button className={styles.searchBtn} aria-label="Search">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-
-          <button className={`${styles.btn} ${styles.btnHover}`}>
-            Call Us
-          </button>
+          <img src="/mainlogo.jpg" className={styles.mainlogo} alt="" />
 
           <button
             className={styles.navToggleBtn}
