@@ -1,4 +1,5 @@
 import styles from "./Promo.module.css";
+import { redirectToWhatsApp } from "../../services/wpRedirect";
 
 const promoData = [
   {
@@ -40,31 +41,41 @@ const promoData = [
 
 const Promo = () => {
   return (
-    <div className={styles.promoContainer}>
-      {promoData.map((promo) => (
-        <div key={promo.id} className={styles.promoCard}>
-          <div className={styles.imageWrapper}>
-            <img
-              src={promo.imageUrl}
-              alt={promo.title}
-              className={styles.promoImage}
-            />
+    <>
+      <div>
+        <p className={styles.heading}>Discover Categories</p>
+      </div>
+      <div className={styles.promoContainer}>
+        {promoData.map((promo) => (
+          <div key={promo.id} className={styles.promoCard}>
+            <div className={styles.imageWrapper}>
+              <img
+                src={promo.imageUrl}
+                alt={promo.title}
+                className={styles.promoImage}
+              />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>{promo.title}</h3>
+              <p className={styles.cardDescription}>{promo.description}</p>
+              <ul className={styles.detailsList}>
+                {promo.details.map((detail, index) => (
+                  <li key={index} className={styles.detailItem}>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+              <button
+                onClick={() => redirectToWhatsApp()}
+                className={styles.btn}
+              >
+                Order Now
+              </button>
+            </div>
           </div>
-          <div className={styles.cardContent}>
-            <h3 className={styles.cardTitle}>{promo.title}</h3>
-            <p className={styles.cardDescription}>{promo.description}</p>
-            <ul className={styles.detailsList}>
-              {promo.details.map((detail, index) => (
-                <li key={index} className={styles.detailItem}>
-                  {detail}
-                </li>
-              ))}
-            </ul>
-            <button className={styles.btn}>Order Now</button>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 

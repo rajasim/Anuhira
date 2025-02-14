@@ -30,40 +30,9 @@ const Banner = () => {
               </div>
             </div>
           </li>
-          {/* 
-          <li className={`${styles.bannerItem} ${styles.bannerSm}`}>
-            <div className={styles.bannerCard}>
-              <div className={styles.bannerItemContent}>
-                <h3 className={styles.bannerTitle}>Delights of Gujarat</h3>
-                <p className={styles.bannerText}>
-                  Savor the authentic taste of Gujarati snacks like dhokla,
-                  khandvi, and fafda – a perfect blend of sweet, savory, and
-                  spice that captures the vibrant culinary heritage of Gujarat.
-                </p>
-                <button className={styles.btn}>Order Now</button>
-              </div>
-            </div>
-          </li>
-
-          <li className={`${styles.bannerItem} ${styles.bannerSm}`}>
-            <div className={styles.bannerCard}>
-              <div className={styles.bannerItemContent}>
-                <h3 className={styles.bannerTitle}>
-                  South Indian Snack Fiesta
-                </h3>
-                <p className={styles.bannerText}>
-                  Savor the authentic crunch of crispy murukku, delectable medu
-                  vada, and zesty banana chips – a true celebration of South
-                  Indian snack traditions.
-                </p>
-                <button className={styles.btn}>Order Now</button>
-              </div>
-            </div>
-          </li> */}
 
           <li className={`${styles.bannerItem} ${styles.bannerMd}`}>
             <div className={styles.bannerCard}>
-              {/* Banner image from Unsplash */}
               <img
                 src="/booking.jpg"
                 alt="Vegetarian Delights"

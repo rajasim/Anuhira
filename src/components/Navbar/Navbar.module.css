@@ -1,159 +1,123 @@
-.header {
-  background-color: #fff;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
   color: #333;
 }
 
-.span {
-  color: #ff6347;
+.desktopNav {
+  display: none;
 }
 
-.navbar {
+.navList {
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.navbarList {
-  display: flex;
-  padding-left: 0;
-  list-style: none;
-}
-
-.logoImage {
-  width: 60px;
-  height: 80px;
-}
-
-.navItem {
-  margin: 0 1.5rem;
-}
-
-.navbarLink {
+.navLink {
   text-decoration: none;
-  font-size: 1rem;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.navbarLink:hover {
-  color: #ff6347;
+.navLink:hover {
+  color: #007bff;
 }
 
-.headerBtnGroup {
+.icons {
   display: flex;
-  align-items: center;
+  gap: 1rem;
+  margin-left: 2rem;
 }
 
-.searchBtn {
+.iconButton {
   background: none;
   border: none;
-  font-size: 1.5rem;
-  margin-right: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
   color: #333;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.btn {
-  background: linear-gradient(45deg, #f89617, #f0f03b);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.mainlogo {
-  width: 50px;
+.iconButton:hover {
+  color: #007bff;
 }
 
-@keyframes colorChange {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
-.animatedtext {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  animation: colorChange 3s ease alternate-reverse;
-  background: linear-gradient(90deg, #f7b731, #f0fd30, #fa8729);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline-block;
-}
-
-.btnHover:hover {
-  background-color: #ff4500;
-}
-
-.navToggleBtn {
-  display: none;
-  flex-direction: column;
-  align-items: center;
+.menuButton {
   background: none;
   border: none;
+  padding: 0.5rem;
   cursor: pointer;
-}
-
-.navToggleBtn .line {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 4px 0;
-}
-
-.navbar.open {
+  color: #333;
   display: block;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
+.mobileNav {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileNav.active {
+  transform: translateX(0);
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobileIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+@media (min-width: 769px) {
+  .desktopNav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menuButton {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 1rem;
   }
 
-  .navbar.open {
-    display: flex;
-  }
-
-  .navItem {
-    margin: 1rem 0;
-  }
-
-  .navToggleBtn {
-    display: flex;
+  .mobileNav {
+    display: none;
   }
 }

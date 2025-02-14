@@ -1,83 +1,141 @@
 import styles from "./Footer.module.css";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaPinterest,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div
-        className={styles.footerTop}
-        style={{ backgroundImage: 'url("./assets/images/footer-dark-bg.png")' }}
-      >
+    <footer className={styles.footer} aria-label="Website footer">
+      <div className={styles.footerTop}>
         <div className={styles.container}>
-          <div className={styles.footerBrand}>
-            <a href="#" className={styles.logo}>
-              Anuhira <span className={styles.span}>Faral</span>
-            </a>
-            <p className={styles.footerText}>
+          {/* Brand Section */}
+          <section
+            className={styles.brandSection}
+            aria-label="Company information"
+          >
+            <h2 className={styles.logo}>
+              <a href="/" className={styles.logoLink}>
+                Anuhira <span className={styles.logoHighlight}>Faral</span>
+              </a>
+            </h2>
+            <p className={styles.tagline}>
               Delivering the true essence of Indian Faral with a modern twist.
             </p>
 
-            <ul className={styles.socialList}>
-              <li>
-                <a href="#" className={styles.socialLink}>
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.socialLink}>
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.socialLink}>
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#" className={styles.socialLink}>
-                  <ion-icon name="logo-pinterest"></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </div>
+            {/* Social Links */}
+            <div className={styles.socials} aria-label="Social media links">
+              <a
+                href="https://facebook.com"
+                className={styles.socialLink}
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://twitter.com"
+                className={styles.socialLink}
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://instagram.com"
+                className={styles.socialLink}
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://pinterest.com"
+                className={styles.socialLink}
+                aria-label="Pinterest"
+              >
+                <FaPinterest />
+              </a>
+            </div>
+          </section>
 
-          <ul className={styles.footerList}>
-            <li>
-              <p className={styles.footerListTitle}>Contact Info</p>
-            </li>
-            <li>
-              <p className={styles.footerListItem}>+919822341010</p>
-            </li>
-            <li>
-              <p className={styles.footerListItem}>info@anuhirafaral.com</p>
-            </li>
-            <li>
-              <address className={styles.footerListItem}>
-                Shahu Corner, Seva Lodge, Ichalkaranji, Maharashtra 416115
+          {/* Navigation Sections */}
+          <div className={styles.footerColumns}>
+            {/* Quick Links */}
+            <nav aria-label="Quick links">
+              <h3 className={styles.columnTitle}>Quick Links</h3>
+              <ul className={styles.linkList}>
+                <li>
+                  <a href="/" className={styles.linkItem}>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/about" className={styles.linkItem}>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/products" className={styles.linkItem}>
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className={styles.linkItem}>
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            {/* Contact Information */}
+            <section aria-label="Contact information">
+              <h3 className={styles.columnTitle}>Contact Info</h3>
+              <address className={styles.contactInfo}>
+                <p className={styles.contactItem}>
+                  <a href="tel:+919822341010" className={styles.contactLink}>
+                    +91 98223 41010
+                  </a>
+                </p>
+                <p className={styles.contactItem}>
+                  <a
+                    href="mailto:info@anuhirafaral.com"
+                    className={styles.contactLink}
+                  >
+                    info@anuhirafaral.com
+                  </a>
+                </p>
+                <p className={styles.contactItem}>
+                  Shahu Corner, Seva Lodge,
+                  <br />
+                  Ichalkaranji, Maharashtra
+                  <br />
+                  416115
+                </p>
               </address>
-            </li>
-          </ul>
+            </section>
 
-          <ul className={styles.footerList}>
-            <li>
-              <p className={styles.footerListTitle}>Opening Hours</p>
-            </li>
-            <li>
-              <p className={styles.footerListItem}>
-                Mon - Sun: 10:00 AM - 9:00 PM
+            {/* Opening Hours */}
+            <section aria-label="Opening hours">
+              <h3 className={styles.columnTitle}>Opening Hours</h3>
+              <p className={styles.openingHours}>
+                Mon - Sun:
+                <br />
+                10:00 AM - 9:00 PM
               </p>
-            </li>
-          </ul>
+            </section>
+          </div>
         </div>
       </div>
 
+      {/* Copyright Section */}
       <div className={styles.footerBottom}>
         <div className={styles.container}>
-          <p className={styles.copyrightText}>
+          <p className={styles.copyright}>
             &copy; 2025{" "}
-            <a href="#" className={styles.copyrightLink}>
-              Anuhira
+            <a href="/" className={styles.copyrightLink}>
+              Anuhira Faral
             </a>{" "}
-            | All Rights Reserved. | Made with 💖 By Sourabh & ABM Group
+            | All Rights Reserved. | Made with 💖 By Sourabh Malame & ABM Group
           </p>
         </div>
       </div>

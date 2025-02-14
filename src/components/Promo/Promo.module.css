@@ -6,6 +6,13 @@
   padding: 2rem;
   background-color: #f8f8f8;
 }
+.heading {
+  text-align: center;
+  font-size: 30px;
+
+  background-color: #f8f8f8;
+  padding-top: 40px;
+}
 
 /* Card styling with smooth transitions and shadow */
 .promoCard {

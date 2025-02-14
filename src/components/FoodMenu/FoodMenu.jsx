@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./FoodMenu.module.css";
+import { redirectToWhatsApp } from "../../services/wpRedirect";
 
-// Data for Indian Gharal (homestyle) fare
 const menuItems = [
   {
     id: 1,
@@ -65,7 +65,6 @@ const menuItems = [
   },
 ];
 
-// Filter options
 const filterOptions = ["All", "Snacks", "Sweets"];
 
 const FoodMenu = () => {
@@ -80,9 +79,9 @@ const FoodMenu = () => {
   return (
     <section className={`${styles.section} ${styles.foodMenu}`} id="food-menu">
       <div className={styles.container}>
-        <p className={styles.sectionSubtitle}>Authentic Gharal Indian Fare</p>
+        <p className={styles.sectionSubtitle}>Our Homestyle Menus</p>
         <h2 className={styles.sectionTitle}>
-          Our Homestyle <span className={styles.span}>Menus</span>
+          Diwali <span className={styles.span}>Special</span>
         </h2>
         <p className={styles.sectionText}>
           Indulge in the rich flavors of Indian home cooking—each dish is
@@ -116,7 +115,10 @@ const FoodMenu = () => {
                     className={styles.cardImage}
                   />
                   <div className={styles.badge}>{item.discount}</div>
-                  <button className={`${styles.btn} ${styles.foodMenuBtn}`}>
+                  <button
+                    onClick={() => redirectToWhatsApp()}
+                    className={`${styles.btn} ${styles.foodMenuBtn}`}
+                  >
                     Order Now
                   </button>
                 </div>
