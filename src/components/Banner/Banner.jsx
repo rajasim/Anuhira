@@ -1,3 +1,4 @@
+import { redirectToWhatsApp } from "../../services/wpRedirect";
 import styles from "./Banner.module.css";
 
 const Banner = () => {
@@ -26,7 +27,12 @@ const Banner = () => {
                   Enjoy a burst of festive flavor in every bite!
                 </p>
 
-                <button className={styles.btn}>Discover Now</button>
+                <button
+                  onClick={() => redirectToWhatsApp()}
+                  className={styles.btn}
+                >
+                  Discover Now
+                </button>
               </div>
             </div>
           </li>

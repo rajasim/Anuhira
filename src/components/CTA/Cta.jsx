@@ -1,4 +1,5 @@
 import styles from "./Cta.module.css";
+import { redirectToWhatsApp } from "../../services/wpRedirect";
 
 const Cta = () => {
   return (
@@ -27,7 +28,10 @@ const Cta = () => {
             service, every bite promises a symphony of flavors and a luxurious
             culinary delight.
           </p>
-          <button className={`${styles.btn} ${styles.btnHover}`}>
+          <button
+            onClick={() => redirectToWhatsApp()}
+            className={`${styles.btn} ${styles.btnHover}`}
+          >
             Order Now
           </button>
         </div>
