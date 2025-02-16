@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className={styles.socials} aria-label="Social media links">
+            {/* <div className={styles.socials} aria-label="Social media links">
               <a
                 href="https://facebook.com"
                 className={styles.socialLink}
@@ -55,13 +55,13 @@ const Footer = () => {
               >
                 <FaPinterest />
               </a>
-            </div>
+            </div> */}
           </section>
 
           {/* Navigation Sections */}
           <div className={styles.footerColumns}>
             {/* Quick Links */}
-            <nav aria-label="Quick links">
+            {/* <nav aria-label="Quick links">
               <h3 className={styles.columnTitle}>Quick Links</h3>
               <ul className={styles.linkList}>
                 <li>
@@ -85,7 +85,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
 
             {/* Contact Information */}
             <section aria-label="Contact information">

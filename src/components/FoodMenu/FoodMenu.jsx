@@ -56,10 +56,10 @@ const menuItems = [
   {
     id: 6,
     category: "Snacks",
-    discount: "-7%",
+    discount: "-50%",
     title: "Sev",
-    price: "22.00",
-    originalPrice: "24.00",
+    price: "220.00",
+    originalPrice: "440.00",
     rating: 5,
     imageUrl: "/Sev.jpg",
   },

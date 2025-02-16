@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className={styles.desktopNav}>
+        {/* <div className={styles.desktopNav}>
           <ul className={styles.navList}>
             <li>
               <a href="#home" className={styles.navLink}>
@@ -48,7 +48,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#contact" className={styles.navLink}>
+              <a href="#footer" className={styles.navLink}>
                 Contact
               </a>
             </li>
@@ -61,7 +61,7 @@ const Navbar = () => {
               <FiShoppingCart size={20} />
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile Navigation */}
         <button
@@ -74,7 +74,7 @@ const Navbar = () => {
         </button>
 
         {/* Mobile Menu */}
-        <div
+        {/* <div
           className={`${styles.mobileNav} ${
             isMobileMenuOpen ? styles.active : ""
           }`}
@@ -125,7 +125,7 @@ const Navbar = () => {
               <FiShoppingCart size={20} />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
