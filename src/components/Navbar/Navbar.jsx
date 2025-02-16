@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiSearch, FiShoppingCart, FiX, FiMenu } from "react-icons/fi";
 import styles from "./Navbar.module.css";
+import { redirectToWhatsApp } from "../../services/wpRedirect";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        {/* <div className={styles.desktopNav}>
+        <div className={styles.desktopNav}>
           <ul className={styles.navList}>
             <li>
               <a href="#home" className={styles.navLink}>
@@ -42,26 +43,14 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            <li>
-              <a href="#services" className={styles.navLink}>
-                Services
-              </a>
-            </li>
-            <li>
+
+            <li onClick={() => redirectToWhatsApp()}>
               <a href="#footer" className={styles.navLink}>
                 Contact
               </a>
             </li>
           </ul>
-          <div className={styles.icons}>
-            <button aria-label="Search" className={styles.iconButton}>
-              <FiSearch size={20} />
-            </button>
-            <button aria-label="Cart" className={styles.iconButton}>
-              <FiShoppingCart size={20} />
-            </button>
-          </div>
-        </div> */}
+        </div>
 
         {/* Mobile Navigation */}
         <button
@@ -74,7 +63,7 @@ const Navbar = () => {
         </button>
 
         {/* Mobile Menu */}
-        {/* <div
+        <div
           className={`${styles.mobileNav} ${
             isMobileMenuOpen ? styles.active : ""
           }`}
@@ -98,34 +87,14 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            <li>
-              <a
-                href="#services"
-                className={styles.navLink}
-                onClick={toggleMobileMenu}
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className={styles.navLink}
-                onClick={toggleMobileMenu}
-              >
+
+            <li onClick={() => redirectToWhatsApp()}>
+              <a href="#" className={styles.navLink} onClick={toggleMobileMenu}>
                 Contact
               </a>
             </li>
           </ul>
-          <div className={styles.mobileIcons}>
-            <button aria-label="Search" className={styles.iconButton}>
-              <FiSearch size={20} />
-            </button>
-            <button aria-label="Cart" className={styles.iconButton}>
-              <FiShoppingCart size={20} />
-            </button>
-          </div>
-        </div> */}
+        </div>
       </div>
     </nav>
   );
