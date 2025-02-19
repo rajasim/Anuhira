@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
-          <h1>Anuhira Mahila Gruha Udyog</h1>
+          <h1>ANUHIRA MAHILA GRUH UDYOG</h1>
         </div>
 
         {/* Desktop Navigation */}
