@@ -135,7 +135,7 @@ const Footer = () => {
             <a href="/" className={styles.copyrightLink}>
               Anuhira Faral
             </a>{" "}
-            | All Rights Reserved. | Made with 💖 By Sourabh Malame & ABM Group
+            | All Rights Reserved. | Made  By  & ABM Group
           </p>
         </div>
       </div>
